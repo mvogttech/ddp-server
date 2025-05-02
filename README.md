@@ -1,5 +1,7 @@
 # Meteor DDP Server
 
+> This project is still in development not yet ready for production use or publication to npm.
+
 A modern implementation of the Distributed Data Protocol (DDP) server for Meteor.js, built with TypeScript, Node.js, and ws for high performance and scalability.
 Features
 
@@ -11,16 +13,16 @@ Features
 - Type-safe codebase with TypeScript.
 - Comprehensive test suite with Jest.
 
-### Installation
+### Installation (soon to be published)
 
 ```bash
-npm install @meteor/ddp-server
+npm install mvogttech/ddp-server
 ```
 
 Usage
 
 ```javascript
-import { DDPServer } from '@meteor/ddp-server';
+import { DDPServer } from 'mvogttech/ddp-server';
 
 const server = new DDPServer();
 
