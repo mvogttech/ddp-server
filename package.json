@@ -1,0 +1,82 @@
+{
+  "name": "@mvogttech/ddp-server",
+  "version": "1.0.0",
+  "description": "Modern DDP server implementation for Meteor.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:perf:load": "node tests/performance/load.test.js",
+    "test:perf:ws": "k6 run tests/performance/websocket.test.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "docs": "typedoc --out docs/api src"
+  },
+  "dependencies": {
+    "cbor-x": "^1.5.0",
+    "pino": "^8.0.0",
+    "prom-client": "^14.0.0",
+    "redis": "^4.6.0",
+    "thread-stream": "^2.0.0",
+    "uuid": "^9.0.0",
+    "ws": "^8.14.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.5",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "autocannon": "^7.9.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.0.0",
+    "tsc-alias": "^1.8.15",
+    "typedoc": "^0.25.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "meteor",
+    "ddp",
+    "websocket",
+    "realtime"
+  ],
+  "author": "mvogttech",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvogttech/ddp-server"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "testMatch": [
+      "**/*.test.ts"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.d.ts",
+      "!src/index.ts"
+    ]
+  }
+}

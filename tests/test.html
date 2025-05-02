@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <body>
+    <script>
+      const ws = new WebSocket('ws://localhost:3000/websocket');
+      ws.onopen = () => {
+        ws.send(
+          JSON.stringify({ msg: 'connect', version: '1.0', support: ['1.0'] })
+        );
+      };
+      ws.onmessage = (event) =>
+        console.log('Received:', JSON.parse(event.data));
+      ws.onerror = (err) => console.error('Error:', err);
+      ws.onclose = () => console.log('Disconnected');
+    </script>
+  </body>
+</html>
