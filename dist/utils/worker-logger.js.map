@@ -1,0 +1,1 @@
+{"version":3,"file":"worker-logger.js","sourceRoot":"","sources":["../../src/utils/worker-logger.ts"],"names":[],"mappings":";;;;;AAAA,gDAAwB;AAExB,MAAM,MAAM,GAAG,IAAA,cAAI,EAAC;IAClB,KAAK,EAAE,OAAO,CAAC,GAAG,CAAC,SAAS,IAAI,MAAM;CACvC,CAAC,CAAC;AAEH,MAAM,CAAC,OAAO,GAAG,CAAC,IAAI,EAAE,EAAE;IACxB,MAAM,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;AACpB,CAAC,CAAC"}
